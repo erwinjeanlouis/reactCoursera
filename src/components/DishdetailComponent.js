@@ -31,23 +31,23 @@ class DishDetail  extends Component {
     {
         return(
         <Card>
-            <CardImg top src={this.props.selectedDish.image} alt={this.props.selectedDish.name} />
+            <CardImg top src={this.props.dish.image} alt={this.props.dish.name} />
             <CardBody>
-            <CardTitle>{this.props.selectedDish.name}</CardTitle>
-            <CardText>{this.props.selectedDish.description}</CardText>
+            <CardTitle>{this.props.dish.name}</CardTitle>
+            <CardText>{this.props.dish.description}</CardText>
             </CardBody>
         </Card>
         );
     }
     render() {
-        if (this.props.selectedDish != null)
+        if (this.props.dish != null)
             return(
                 <div className="row">
                     <div  className="col-12 col-md-5 m-1">
-                        {this.renderDish(this.props.selectedDish)}
+                        {this.renderDish(this.props.dish)}
                     </div>
                     <div  className="col-12 col-md-5 m-1">
-                        {this.renderComments(this.props.selectedDish.comments)}                                             
+                        {this.renderComments(this.props.dish.comments)}                                             
                     </div>                             
                 </div>
             );
